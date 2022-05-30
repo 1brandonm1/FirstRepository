@@ -1,0 +1,16 @@
+First steps to setup Git/GitHub for Mac users:
+1.	Update Homebrew in terminal:
+	
+	$ brew update
+
+2.	If git is not installed, install git in terminal:
+
+	$ brew install git
+
+3.	If git is installed, update to latest version:
+	
+	$ brew upgrade git
+
+4.	Check git version to confirm update:
+	
+	$ git --version
