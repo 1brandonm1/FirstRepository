@@ -1,0 +1,51 @@
+In order to link our local machine to our GitHub account, we must create an SSH key and use this key 
+in our GitHub account:
+
+1.	Create an account on GitHub
+2.	Generate an SSH key in the terminal:
+	
+	$ ssh-keygen -t rsa -b 4096 -C "<GITHUB-EMAIL-ADDRESS>"
+
+	A prompt appears allowing us to rename the key file, pressing enter defaults the name to
+	id_rsa. The key files will be place in the .ssh folder of the current user. That is,
+	the files will be saved in 
+
+	/Users/<USER>/.ssh/id_rsa 
+
+	for example. Note that the .ssh folder is hidden by the system. We can see all hidden files
+	in a directory by typing
+
+	$ ls -la
+
+3.	The ssh-keygen command generates both a private key and a public key. In the .ssh folder, we
+	see can see an id_rsa and id_rsa.pub file. The .pub file's contents must be used for GitHub.
+	We can view its contents with
+
+	$ cat id_rsa.pub
+
+	Now, we simply highlight and copy this key.
+
+4.	Go to GitHub > Account > Settings > SSH and GPG keys > New SSH key.
+	Simply paste the copied key under Key and add it. (Note there may be an extra space at the
+	end of the key that must be removed.)
+
+5.	Finally, we must modify/create a config file in the .ssh directory. If there already exists
+	a config file, we will simply add some lines to it; otherwise, create a config file while
+	in the .ssh directory:
+	
+	$ touch config
+
+	And now open the config file:
+
+	$ open config
+
+	We must add the following lines to the file:
+
+	Host *
+  	  AddKeysToAgent yes
+  	  UseKeychain yes
+  	  IdentityFile ~/.ssh/id_rsa
+  	  UserKnownHostsFile  ~/.ssh/known_hosts
+
+6.	Save the config file. Now when we push our commits, GitHub will authenticate our local
+	machine using the SSH keys.
