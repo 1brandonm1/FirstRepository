@@ -36,11 +36,11 @@ If first created a local repository:
 
 	$ git remote set-url origin git@github.com:<GITHUB-USERNAME>/<REPOSITORY-NAME>.git
 
-5.	If we are in the main branch, we can now push this local main to the GitHub repository:
+6.	If we are in the main branch, we can now push this local main to the GitHub repository:
 
 	$ git push origin main
 
-6.	If we have another branch with some <BRANCH-NAME>, we can also push it to the GitHub 
+7.	If we have another branch with some <BRANCH-NAME>, we can also push it to the GitHub 
 	repository by creating a new branch in GitHub and then pushing the local branch to
 	the new branch. Note that the local branch is still the origin and we can push 
 	<BRANCH-NAME> to a new branch in GitHub with the same name <BRANCH-NAME>:
