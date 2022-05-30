@@ -1,0 +1,43 @@
+Most frequently used git commands:
+
+$ git clone <URL>
+  Retrieves an entire repository from, say, GitHub
+
+$ git branch
+  Lists all branches in our repository
+  Tells us which branch we are currently working in with a "*"
+
+$ git branch <BRANCH-NAME>
+  Creates a new branch at current commit
+
+$ git checkout <BRANCH-NAME>
+  Allows us to move to another branch
+
+$ git merge <OTHER-BRANCH-NAME>
+  Merges current branch with other branch. Note that there may be conflicts that need to be resolved.
+
+$ git status
+  Shows us any untracked files that have not been committed in red
+  Any tracked files that have not been committed are shown in green
+
+$ git add <FILE-NAME>
+  Adds a file with <FILE-NAME> to next commit
+
+$ git add .
+  Adds all non-committed files to next commit
+
+$ git commit -m "Type descriptive message here"
+  Commits all added files with a descriptive message. The "-m" allows us to write the message.
+
+$ git log
+  Shows all commits from current branch
+
+$ git log --graph
+  Shows all commits in branch with a graph
+
+$ git log --oneline --graph --all --decorate
+  Shows simpler log of all branches in a graph
+
+$ git push origin <BRANCH-NAME>
+  Pushes current branch to some branch with <BRANCH-NAME> on GitHub
+  (This is noted in the git_push_steps.txt file)
