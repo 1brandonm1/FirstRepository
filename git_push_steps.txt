@@ -18,15 +18,23 @@ If first created repository on GitHub:
 	$ git push origin main
 
 If first created a local repository:
-1.	Create a repository on GitHub with some <REPOSITORY-NAME>.
-2.	In the terminal, type:
+1.	Create an empty repository on GitHub with some <REPOSITORY-NAME>.
+2.	Ensure the local repository is initialized:
 
-	$ git remote set-url origin git@github.com:<GITHUB-USERNAME>/<REPOSITORY-NAME>.git
+	$ git init
 
-3.	Ensure everything in local repository is added and committed.
-4.	Now, we need to add origin to GitHub:
+3.	Add any untracked files and create an initial commit:
+
+	$ git add .
+	$ git commit -m "Initial commit"
+
+4.	Since the GitHub repository is empty, we must add an origin to GitHub:
 
 	$ git remote add origin git@github.com:<GITHUB-USERNAME>/<REPOSITORY-NAME>.git
+
+5.	We must now set the url we want to push to from our local repository:
+
+	$ git remote set-url origin git@github.com:<GITHUB-USERNAME>/<REPOSITORY-NAME>.git
 
 5.	If we are in the main branch, we can now push this local main to the GitHub repository:
 
