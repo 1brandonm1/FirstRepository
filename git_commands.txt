@@ -10,6 +10,12 @@ $ git branch
 $ git branch <BRANCH-NAME>
   Creates a new branch at current commit
 
+$ git branch -D <BRANCH-NAME>
+  Deletes local branch
+
+$ git push origin :<BRANCH-NAME>
+  Deletes remote branch
+
 $ git checkout <BRANCH-NAME>
   Allows us to move to another branch
 
