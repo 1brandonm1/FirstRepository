@@ -35,6 +35,9 @@ $ git add .
 $ git commit -m "Type descriptive message here"
   Commits all added files with a descriptive message. The "-m" allows us to write the message.
 
+$ git commit -m "Type short message/title here" -m "Type longer description here"
+  Commits all added files with a descriptive message and a longer description.
+
 $ git commit --amend
   Allows us to amend/edit the message of our most recent commit
 
